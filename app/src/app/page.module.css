@@ -1,0 +1,65 @@
+.bacImg {
+  background-image: url("../../public/1.png");
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  & .sectionWrap {
+    margin: 0 auto;
+    max-width: 1260px;
+    & .preview {
+      max-width: 679px;
+      margin-top: 80px;
+      padding-bottom: 236px;
+      & h1 {
+        font: 400 90px "Inter";
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 1);
+      }
+      & p {
+        font: 300 18px "Inter";
+        color: rgba(255, 255, 255, 1);
+        font-style: light;
+        margin: 45px 0;
+      }
+      & button {
+        background-color: rgba(245, 117, 32, 1);
+        color: rgba(255, 255, 255, 1);
+        font: 500 16px "Inter";
+        border-radius: 10px;
+        padding: 16px 80px;
+      }
+    }
+  }
+}
+.sliderWrapper{
+  background-color: rgba(19, 19, 19, 1);
+  margin: 0 auto;
+ & .sliderButtons{
+  display: flex;
+  width: 100%;
+  & div{
+    background-color: rgba(19, 19, 19, 1);
+    color: rgba(255, 255, 255, 1);
+    font: 500 24px "Inter";
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 48px 102px;
+    width: 33%;
+    margin: 0 auto;
+    justify-content: center;
+  }
+  & div:hover{
+    background-color: rgba(46, 46, 46, 1);
+  }
+}
+}
+.partners{
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  gap:30px;
+  margin: 48px auto;
+  justify-content: center;
+}

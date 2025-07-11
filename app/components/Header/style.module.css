@@ -1,0 +1,30 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 230px;
+  max-width: 1260px;
+  margin: 0 auto;
+  align-items: center;
+  padding: 28px 0;
+  & .left {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    & .links {
+      display: flex;
+      gap: 32px;
+      & p {
+        color: rgba(255, 255, 255, 1);
+        font: 400 12px "Inter";
+        text-transform: uppercase;
+      }
+      & p:hover{
+        color: rgba(245, 117, 32, 1);
+      }
+    }
+    & .buttons {
+      display: flex;
+      gap: 24px;
+    }
+  }
+}
