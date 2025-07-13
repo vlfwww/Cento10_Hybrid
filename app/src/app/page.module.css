@@ -32,34 +32,71 @@
     }
   }
 }
-.sliderWrapper{
+.sliderWrapper {
   background-color: rgba(19, 19, 19, 1);
   margin: 0 auto;
- & .sliderButtons{
-  display: flex;
-  width: 100%;
-  & div{
-    background-color: rgba(19, 19, 19, 1);
-    color: rgba(255, 255, 255, 1);
-    font: 500 24px "Inter";
+  & .sliderButtons {
     display: flex;
-    align-items: center;
-    text-align: center;
-    padding: 48px 102px;
-    width: 33%;
-    margin: 0 auto;
-    justify-content: center;
-  }
-  & div:hover{
-    background-color: rgba(46, 46, 46, 1);
+    width: 100%;
+    & div {
+      background-color: rgba(19, 19, 19, 1);
+      color: rgba(255, 255, 255, 1);
+      font: 500 24px "Inter";
+      display: flex;
+      align-items: center;
+      text-align: center;
+      padding: 48px 102px;
+      width: 33%;
+      margin: 0 auto;
+      justify-content: center;
+    }
+    & div:hover {
+      background-color: rgba(46, 46, 46, 1);
+    }
   }
 }
-}
-.partners{
+.partners {
   display: flex;
   flex-wrap: nowrap;
   overflow: hidden;
-  gap:30px;
+  gap: 30px;
   margin: 48px auto;
   justify-content: center;
+}
+.sale {
+  background-color: rgba(248, 248, 248, 1);
+  padding: 80px 80px;
+  & .title {
+    font: 400 60px "Inter";
+    color: rgba(16, 16, 16, 1);
+    margin-bottom: 80px;
+  }
+  & .wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+  & .showAll {
+    font: 400 12px "Inter";
+    text-transform: uppercase;
+    color: rgba(119, 119, 119, 1);
+    text-align: center;
+    padding-top: 48px;
+  }
+}
+.catalog {
+  & .catalogWrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    & .title {
+      font: 700 60px "Inter";
+      font-style: bold;
+      color: rgba(16, 16, 16, 1);
+    }
+  }
+  & .wrapper{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+  }
 }
