@@ -6,25 +6,72 @@
   margin: 0 auto;
   align-items: center;
   padding: 28px 0;
+
   & .left {
     display: flex;
     align-items: center;
     gap: 60px;
+
     & .links {
       display: flex;
       gap: 32px;
+
       & p {
         color: rgba(255, 255, 255, 1);
         font: 400 12px "Inter";
         text-transform: uppercase;
       }
-      & p:hover{
+
+      & p:hover {
         color: rgba(245, 117, 32, 1);
       }
     }
+
     & .buttons {
       display: flex;
       gap: 24px;
+      margin: 0 auto;
+        padding: 10px 16px;
+        font: 400 14px "Inter"; 
+        border: none;
+        border-radius: 5px;
+        background-color: rgba(245, 117, 32, 1);
+        color: white;
+        cursor: pointer;
+
+        @media (max-width: 768px) {
+          flex: 1;
+          margin: 0;
+          margin: 0 auto;
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px; 
+
+    & .left {
+      flex-direction: column; 
+      align-items: flex-start; 
+      gap: 20px;
+    }
+
+    & .links {
+      flex-wrap: wrap; 
+      gap: 16px; 
+    }
+  }
+
+  @media (max-width: 768px) {
+    gap: 20px; 
+  }
+  @media (max-width:587px) {
+    .left .links{
+      flex-direction: column;
+      align-items: center;
+      margin: 0 auto;
     }
   }
 }

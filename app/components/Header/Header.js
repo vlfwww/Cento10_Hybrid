@@ -24,7 +24,7 @@ function Header (){
                     <Image src={heart} alt='img'/>
                     <Image src={cart} alt='img'/>
                 </div>
-                <Image src={menu} alt='img'/>
+                {/* <Image src={menu} alt='img'/> */}
             </div>
         </div>
     )

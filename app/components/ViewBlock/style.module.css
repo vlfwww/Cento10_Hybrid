@@ -1,0 +1,126 @@
+.block {
+  max-width: 500px;
+  min-width: 300px;
+  border-radius: 10px;
+  background-color: rgba(16, 16, 16, 1);
+  & img {
+    border-radius: 10px;
+    width: 100%;
+  }
+  & .date {
+    font: 400 16px "Inter";
+    color: rgba(255, 255, 255, 1);
+    margin: 24px 10px 8px;
+  }
+  & .view {
+    font: 400 16px "Inter";
+    color: rgba(245, 117, 32, 1);
+    margin-left: 10px;
+  }
+  .block {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    background-color: rgba(16, 16, 16, 1);
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    & img {
+      border-radius: 10px 10px 0 0;
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    & .date {
+      font: 400 16px "Inter";
+      color: rgba(255, 255, 255, 1);
+      margin: 24px 10px 8px;
+
+      @media (max-width: 768px) {
+        font-size: 14px;
+        margin: 16px 10px 6px;
+      }
+    }
+
+    & .view {
+      font: 400 16px "Inter";
+      color: rgba(245, 117, 32, 1);
+      margin-left: 10px;
+
+      @media (max-width: 768px) {
+        font-size: 14px;
+      }
+    }
+
+    & .title {
+      font: 300 18px "Inter";
+      color: rgba(255, 255, 255, 1);
+      margin: 16px 10px 24px;
+      line-height: 1.4;
+
+      @media (max-width: 768px) {
+        font-size: 16px;
+        margin: 12px 10px 16px;
+      }
+    }
+
+    & .all {
+      font: 400 16px "Inter";
+      color: rgba(255, 255, 255, 1);
+      margin-bottom: 35px;
+      margin-left: 10px;
+      display: inline-block;
+
+      @media (max-width: 768px) {
+        font-size: 14px;
+        margin-bottom: 25px;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      max-width: 450px;
+    }
+
+    @media (max-width: 768px) {
+      max-width: 100%;
+      border-radius: 8px;
+
+      & img {
+        border-radius: 8px 8px 0 0;
+      }
+    }
+    @media (max-width:600px){
+      width: 200px;
+    }
+    @media (max-width: 480px) {
+      & .date,
+      & .view,
+      & .title,
+      & .all {
+        margin-left: 8px;
+        margin-right: 8px;
+      }
+
+      & .title {
+        font-size: 10px;
+      }
+    }
+  }
+  & .title {
+    font: 300 18px "Inter";
+    color: rgba(255, 255, 255, 1);
+    margin: 16px 10px 24px;
+  }
+  & .all {
+    font: 400 16px "Inter";
+    color: rgba(255, 255, 255, 1);
+    margin-bottom: 35px;
+    margin-left: 10px;
+  }
+}
+@media (max-width: 1132px) {
+  .block {
+    font-size: 10px;
+  }
+}

@@ -23,6 +23,14 @@ import pic from "../../public/pic.png";
 import adv from "../../public/advantages.png";
 import equipment from '../../../equipment';
 import but from '../../public/but.png';
+import ViewBlock from "../../components/ViewBlock";
+import views from '../../../views';
+import map from '../../public/map.png';
+import smartphone from '../../public/smartphone.png'
+import navigation from '../../public/navigation.png'
+import mail from '../../public/mail.png'
+import calendar from '../../public/calendar.png'
+import Footer from '../../components/Footer/index'
 
 const arr = [partner, partner, partner, partner, partner, partner, partner];
 
@@ -56,7 +64,8 @@ export default function Home() {
         ))}
       </section>
       <section className={style.sale}>
-        <p className={style.title}>Новинки</p>
+        <div className={style.saleWrapper}>
+           <p className={style.title}>Новинки</p>
         <div className={style.wrapper}>
           {bikes.map((el, index) => (
             <SaleBlock
@@ -68,6 +77,7 @@ export default function Home() {
           ))}
         </div>
         <p className={style.showAll}>показать все</p>
+        </div>
       </section>
       <section className={style.catalog}>
         <div className={style.catalogWrapper}>
@@ -297,8 +307,57 @@ export default function Home() {
       <section className={style.view}>
         <div className={style.viewWrapper}>
           <p className={style.title}>Последние обзоры</p>
+          <div className={style.wrapper}>
+            {views.map((el, index) => (
+              <ViewBlock
+                key={el.id || index}
+                img={el.img}
+                title={el.title}
+                date={el.date}
+              />
+            ))}
+          </div>
+          <p className={style.showAll}>показать все</p>
         </div>
       </section>
+      <section className={style.contacts}>
+        <div className={style.contactsWrapper}>
+          <div className={style.titleWrapper}>
+            <p className={style.title}>Контакты</p>
+          </div>
+          <Image src={map} alt="map" className={style.map}/>
+          <div className={style.wrapper}>
+            <div className={style.block}>
+              <Image src={smartphone} alt="img"/>
+              <div className={style.textWrapper}>
+                <p>+7 (495) 055-75-86</p>
+                <p>+7 (965) 142-22-99</p>
+              </div>
+            </div>
+            <div className={style.block}>
+              <Image src={navigation} alt="img"/>
+              <div className={style.textWrapper}>
+                <p>г. Москва, ул.</p>
+                <p> Доватора, 7/8 с1</p>
+              </div>
+            </div>
+            <div className={style.block}>
+              <Image src={mail} alt="img"/>
+              <div className={style.textWrapper}>
+                <p>order@world-bike.ru</p>
+              </div>
+            </div>
+            <div className={style.block}>
+              <Image src={calendar} alt="img"/>
+              <div className={style.textWrapper}>
+                <p>Без выходных </p>
+                <p>10:00-20:00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <Footer/>
     </div>
   );
 }

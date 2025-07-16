@@ -1,0 +1,188 @@
+.wrapper {
+  margin: 0 auto;
+  background-color: rgba(19, 19, 19, 1);
+  
+  & .subscribe {
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1260px;
+    padding: 0 20px;
+    
+    & .left {
+      max-width: 764px;
+      width: 100%;
+      
+      & h1 {
+        font: 400 60px "Inter";
+        text-transform: uppercase;
+        margin-top: 40px;
+        
+        @media (max-width: 1024px) {
+          font-size: 48px;
+        }
+        
+        @media (max-width: 768px) {
+          font-size: 36px;
+          margin-top: 30px;
+        }
+        
+        @media (max-width: 480px) {
+          font-size: 28px;
+        }
+      }
+      
+      & .form {
+        display: flex;
+        gap: 16px;
+        margin: 32px 14px;
+        
+        @media (max-width: 768px) {
+          flex-direction: column;
+          margin: 24px 0;
+        }
+        
+        & input {
+          width: 346px;
+          padding: 10px 16px;
+          border-radius: 5px;
+          border: none;
+          
+          @media (max-width: 768px) {
+            width: 100%;
+          }
+        }
+        
+        & button {
+          padding: 16px 80px;
+          text-align: center;
+          color: white;
+          background-color: rgba(245, 117, 32, 1);
+          font: 500 16px "Inter";
+          border: none;
+          border-radius: 10px;
+          
+          @media (max-width: 768px) {
+            padding: 16px 0;
+            width: 100%;
+          }
+        }
+      }
+      
+      & .check {
+        display: flex;
+        gap: 8px;
+        font: 400 12px "Inter";
+        margin-bottom: 40px;
+      }
+    }
+    
+    & .right {
+      @media (max-width: 1024px) {
+        display: none;
+      }
+      
+      & img {
+        width: 100%; /* Задаем ширину 100% для адаптивности */
+        max-width: 400px; /* Ограничиваем максимальную ширину */
+        height: auto; /* Поддерживаем соотношение сторон */
+        object-fit: contain; /* Убедитесь, что изображение сохраняет свои пропорции */
+      }
+    }
+  }
+  
+  & .links {
+    & .wrapper {
+      max-width: 1260px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 20px;
+      flex-wrap: wrap;
+      
+      @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 30px;
+      }
+      
+      & .blockFirst {
+        @media (max-width: 768px) {
+          order: 1;
+          margin-top: 30px;
+        }
+        
+        & p {
+          font: 300 16px "Inter";
+          color: rgba(179, 179, 179, 1);
+          margin-top: 64px;
+          max-width: 289px;
+          
+          @media (max-width: 768px) {
+            margin-top: 0;
+            max-width: 100%;
+          }
+        }
+      }
+      
+      & .block {
+        @media (max-width: 768px) {
+          width: 100%;
+        }
+        
+        & h1 {
+          font: 500 24px "Inter"; 
+          color: rgba(255, 255, 255, 1);
+          
+          @media (max-width: 480px) {
+            font-size: 20px;
+          }
+        }
+        
+        & p {
+          margin-top: 32px;
+          font: 300 16px "Inter";
+          color: rgba(179, 179, 179, 1);
+          cursor: pointer;
+          
+          @media (max-width: 768px) {
+            margin-top: 16px;
+          }
+        }
+        
+        & p:hover {
+          color: rgba(245, 117, 32, 1);
+        }
+        
+        & .textBlock {
+          display: flex;
+          gap: 16px;
+          align-items: center;
+          
+          & p {
+            margin: 15px;
+          }
+        }
+      }
+    }
+    
+    & .bottom {
+      max-width: 1260px;
+      margin: 40px auto 0;
+      border-top: 1px solid rgba(52, 49, 45, 1);
+      color: grey;
+      display: flex;
+      gap: 24px;
+      padding: 14px 20px;
+      flex-wrap: wrap;
+      
+      @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+        padding: 14px 20px;
+      }
+    }
+  }
+}
